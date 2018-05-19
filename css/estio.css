@@ -1,0 +1,117 @@
+/*importando uma fonte pelo URL*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*@import url('../fonts/');*/
+
+/*font-face{
+	font-family: Lato;
+	src: local('../fonts/nome-da-fonte.ttf');
+
+}*/
+div.alert{
+	position: fixed;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto; 
+	z-index: 9999;
+	/*camadas*/
+
+}
+
+#alertaC{
+	display: none;
+
+}
+div#bannerHome{
+	text-align: center;
+	color: white;
+	padding-top: 140px;
+}
+
+hr#principal-hr{	
+	border-color: #15a4fa;
+}
+
+h1#principal-text{
+	color: white;
+	font-weight: bold;
+	font-size: 500%;
+	margin-bottom: 0%;
+}
+
+div#bannerHome div h1{
+	font-family: "Lato" ,sans-serif;
+	font-weight: bold;
+	/*border-bottom: 1px solid;
+	border-color: #15a4fa; */
+}
+
+ .btn-outline-primary{
+ 	border-color: #15a4fa;
+ 	color: #fff;
+ }
+ /*
+ .btn-outline-primary:hover{
+ 	border-color: #15a4fa;
+ 	color: #fff;
+ 	background-color: #ff3;
+ }*/
+
+/*css-transition*/
+
+div#iconesInfo div.col img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#portifolio img.img-thumbnail {
+	width: 100%;
+	height: 100%;
+	border-image-width: 200px;
+	margin: 1%;
+}
+
+div#portifolio {
+	background-color: #f6f9f9;
+	padding-top: 2%;
+	padding: 3%;
+}
+
+ul#listaPortifolio{
+	list-style-type: none;
+
+}
+ul#listaPortifolio li{
+	display: inline;
+	margin: 1%;
+}
+ul#listaPortifolio li img{
+	width: 100%;
+	height: 100%;
+}
+
+div#formDiv{
+	background-image: url('../img/form-bg-blue.jpeg');
+	/*background-size: 100%;*/
+	background-repeat: no-repeat;
+	margin-bottom: -3%;
+}
+
+div#formDiv div#formDivElements{
+	padding: 5%;
+	color: white;
+	text-align: center;
+}
+
+div#formDiv div#formDivElements p{
+	margin-bottom: 1%;
+	padding-bottom: 10%;
+	color: grey;
+}
+
+ input.transparent-input, textarea.transparent-input{
+	background-color:transparent !important;
+	border-color: #15a4fa;
+
+}
