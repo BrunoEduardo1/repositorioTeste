@@ -91,6 +91,11 @@ ul#listaPortifolio li img{
 	height: 100%;
 }
 
+.portfolioLink:hover img{
+	opacity: 0.7;
+	 transition: .5s ease;
+}
+
 div#formDiv{
 	background-image: url('../img/form-bg-blue.jpeg');
 	/*background-size: 100%;*/
