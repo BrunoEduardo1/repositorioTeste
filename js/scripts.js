@@ -7,11 +7,11 @@ $(document).ready(function () {
 		alert($(this).val());	
 	});.
 */
-	$('.slider').bxSlider();
+
 	/*mascaras*/
 	$('.data').mask('00/00/0000');
 	$('.cpf').mask('000.000.000-00');
-
+		$('.slider').bxSlider();
 	$('.cpf').blur(function (){
 		/*if (this==null){
 
@@ -21,7 +21,6 @@ $(document).ready(function () {
 			}else{
 				console.log('false cpf');
 			}*/
-	}
 	});
 
 	$("#nomeInput").keyup(function(){
