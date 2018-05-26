@@ -4,12 +4,14 @@
     <title>Curso Full Stack</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/estio.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--slider CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <!--slider CSS-->
     <!--ICONE -->
       <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -28,15 +30,12 @@
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
-<!--ICONE-->
+    <!--ICONE-->
   </head>
   <body>
     
     <!-- Topo do site -->
   	<header>
-      <div class="alert alert-primary" role="alert" id="alertaC">
-        
-      </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/logo.png" alt="Logo"></a>
@@ -140,18 +139,7 @@
                     <br>
                     <div class="row">
                       <div class="col-md-4 col-sm-6">
-                        <a href="" data-toggle="modal" data-target="#modalImg" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail">
-                     
-                       <!-- Modal Substituivel pelo plugin FancyBox
-                        <div class="modal fade" id="modalImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                                <img src="img/portifolio6.jpg" class="img-thumbnail" style="opacity: 1;">
-                          </div>
-                        </div>
-                        -->
+                        <a href="fotointerna.html" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail">
                       </div>
                       <div class="col-md-4 col-sm-6">
                         <a href="" class="portfolioLink"><img src="img/portifolio1_6.jpeg" class="img-thumbnail" ></a>
@@ -203,7 +191,8 @@
                     <form method="POST" action=""> <!-- Formulario -->
                       <div class="form-group">
                           <!--<label for="nomeInput">Full name</label>-->
-                          <input type="text" class="form-control transparent-input" id="nomeInput" placeholder="Full name" required="true" name="nome">
+                          <input type="text" class="form-control transparent-input" id="nomeInput" placeholder="Nome completo" required="true" name="nome"
+                           oninvalid="this.setCustomValidity('Por favor, Insira seu nome!')">
                       </div>
                       <div class="form-group">
                            <!--<label for="exampleFormControlInput1">Email address</label> for refere-se ao id-->
@@ -213,25 +202,6 @@
                            <!--<label for="exampleFormControlInput1">Email address</label> for refere-se ao id-->
                           <input type="text" class="form-control transparent-input cpf"  id="compocpf" placeholder="CPF" required="true" name="cpf">
                       </div>
-                  <div class="row">
-                        <input type="text" placeholder="CEP" name="cep" id="cep" required="required" class="form-control transparent-input cep">   
-                      </div>
-
-                      <div class="row">
-                        <input type="text" name="endereco" id="endereco" required="required" placeholder="endereco" class="form-control transparent-input">   
-                      </div>
-
-                      <div class="row">
-                        <input type="text" name="bairro" id="bairro" required="required" placeholder="bairro" class="form-control transparent-input">   
-                      </div>
-
-                      <div class="row">
-                        <input type="text" name="cidade" id="cidade" required="required" placeholder="cidade" class="form-control transparent-input">   
-                      </div>
-
-                      <div class="row">
-                        <input type="text" name="estado" id="estado" required="required" placeholder="estado" class="form-control transparent-input">   
-                    </div>
                        <div class="form-group">
                            <!--<label for="exampleFormControlInput1">Email address</label> for refere-se ao id-->
                           <input type="text" class="form-control transparent-input data" id="compocpf" placeholder="Data" required="true" name="datanas">
@@ -249,19 +219,47 @@
                                 <!--<label for="receberNews" class="float-left"> Subscribe Newsletter</label>-->
                               </div>
                               <div class="col-md-6">
-                                <button type="submit" class="btn btn-outline-primary float-right" style="color: #fff;">Send</button>
+                                  <!-- Button trigger modal -->
+                                <button type="button" id="avc" class="btn btn-outline-primary float-right" style="color: #fff;">avançar</button>
                               </div>
                            </div> 
                       </div>
-                      <!--
-                      <div class="form-group">
-                        <label for="grauFormacao">Formação </label>
-                        <select id="grauFormacao" name="grauFormacao">
-                          <option   value="">Selecione uma opção</option>
-                          <option value="ensFun">Ensino fundamental</option>
-                          <option value="ensMed">Ensino medio</option>
-                        </select>
-                      </div>-->
+<!-- Modal -->
+                            <div class="modal fade" id="form2" tabindex="-1" role="dialog" aria-labelledby="form2Label" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content  bg-dark">
+                                  <div class="modal-header  bg-dark">
+                                    <h5 class="modal-title" id="form2Label">Complete os dados</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body bg-dark">
+                                      <div class="form-group ">
+                                          <input type="text" placeholder="CEP" name="cep" id="cep" required="required" oninvalid="this.setCustomValidity('Insira seu CEP')" class="form-control transparent-input cep">   
+                                        </div>
+
+                                        <div class="form-group">
+                                          <input type="text" name="endereco" id="endereco" required="required" placeholder="endereco" class="form-control transparent-input">   
+                                        </div>
+
+                                        <div class="form-group">
+                                          <input type="text" name="bairro" id="bairro" required="required" placeholder="bairro" class="form-control transparent-input">   
+                                        </div>
+
+                                        <div class="form-group">
+                                          <input type="text" name="cidade" id="cidade" required="required" placeholder="cidade" class="form-control transparent-input">   
+                                        </div>
+
+                                        <div class="form-group">
+                                          <input type="text" name="estado" id="estado" required="required" placeholder="estado" class="form-control transparent-input">   
+                                      </div>
+                                      <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+<!--fim MOdal--> <!--bug ao fechar o modal-->
                     </form>
                   </div>
                 </div>
@@ -296,7 +294,7 @@
 
       			<li>
       				<!--<a href=""><img src="img/in.jpg" alt="Linkedin"></a>-->
-              <a href=""><div class="socialin"></div> </a>
+              <a href=""><div class="socialin"></div></a>
 
       			</li>
       		</ul>
@@ -307,19 +305,16 @@
       <!-- END Row -->
   	</footer>
   	<!-- Fim footer site -->
-
+<!--scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
-    <!-- jQuery first, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
-    <!-- Fim jQuery first, then Bootstrap JS --> 
     <script src="js/jquery.mask.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  
+ <!--scripts--> 
          
    <!--
     <script src="js/jquery-3.3.1.slim.min.js"></script>

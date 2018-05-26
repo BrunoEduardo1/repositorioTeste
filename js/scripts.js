@@ -1,38 +1,29 @@
 $(document).ready(function () {
-	//alert("teste");
-	console.log("teste");	
-/*
-	$("#nomeInput").blur(function(){
-		console.log("Olá");	
-		alert($(this).val());	
-	});.
-*/
+	
+	console.log("js Carregado");	
 
+	/*Slider*/
+	$('.slider').bxSlider();
 	/*mascaras*/
 	$('.data').mask('00/00/0000');
 	$('.cpf').mask('000.000.000-00');
-		$('.slider').bxSlider();
+	//validar CPF
 	$('.cpf').blur(function (){
-		/*if (this==null){
+		if ($(this).val()==null){
 
 		}else{
 			if(TestaCPF($(this).val())==false){
-				alert('cpf invalido');
+				alert('cpf incorreto!');
 			}else{
-				console.log('false cpf');
-			}*/
-	});
-
-	$("#nomeInput").keyup(function(){
-		var a = $(this).val();
-		if (a.length>= 2 && $("#alertaC").css("display") == "none") {
-			$("#alertaC").fadeIn("slow");	
-
-		} else if (a.length == 0) {
-			$("#alertaC").fadeOut("slow");
+				console.log('cpf True');
+			}
 		}
-		$("#alertaC").html(a);
 	});
+	/*
+	$("#nomeInput").oninvalid(function(){
+		$(this).setCustomValidity('Por favor, insira seu nome!');
+		alert('hue');
+	});*/
 
 	//animação de scroll
 	 $("#galeria-btn-nav, #form-btn-nav").on('click', function(e) {
@@ -52,7 +43,7 @@ $(document).ready(function () {
                      });
                 }); 
 	
-	 //validar CPF
+	
 	 function limpa_formulario_cep() {
         // Limpa valores do formulário de cep.
         $("#endereco").val("");
@@ -111,6 +102,14 @@ $(document).ready(function () {
         }
     });
 
+    $('#avc').click(function (){
+    		console.log('modal apareca');
+    		$(this).attr('data-toggle','modal');
+    		$(this).attr('data-target','#form2');
+    		  var hash = $('body').hash;
+    		  window.location.hash = hash;
+    	
+    });
 
 
 
