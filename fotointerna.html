@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/estio.css"> <!--estiLo-->
+    <!--<link rel="stylesheet" href="css/jquery.fancybox.min.css"/>-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<title>Galeria</title>
+  <title>Foto interna</title>
 </head>
 <body>
-	 <!-- Topo do site -->
-  	<header>
+   <!-- Topo do site -->
+    <header>
       <div class="alert alert-primary" role="alert" id="alertaC">
         
       </div>
@@ -29,7 +30,10 @@
                   <a class="nav-link" href="quemsomos.html" id="quemsomos-btn" target="_self">Quem somos</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="file:///C:/Users/Bruno/Downloads/site/Site/index.html#portifolio" id="galeria-btn-nav" target="_self">Galeria<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href=" " id="galeria-btn-nav" target="_self">Galeria<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href=" " id="galeria-btn-nav" target="_self">Contato</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -39,47 +43,38 @@
             </div>
           </div> <!--fim container-->
           </nav> 
-  	</header>
-  	<!-- Fim Topo do site -->
-        <div id="bannerHome" class="col-md-12">
-         <div class="col-md-6 col-sm-6 mx-auto align-middle">  
-                <h1 class="" id="principal-text">Lista de Fotos</h1>
-                <hr id="principal-hr">
-                <p class="principal-subT">Curso de introdução ao desenvolvimento Full Stack</p>
-                <a href="" style="text-decoration: none;color: white;"><span class="glyphicon glyphicon-chevron-down" style="display: block;border-color: #15a4fa;"></span></a>
-                <span class="glyphicon glyphicon-chevron-down"></span>
-          </div>
-    </div>
-  	<section>
+    </header>
+    <!-- Fim Topo do site -->
+    <section>
                 <div class="row-md-12" id="portifolio" style="background-color: #fff;">
                   <div class="container text-left">
                     <h3>Fotos</h3>
                     <br>
                     <div class="row">
                       <div class="col-md-4 col-sm-6">
-                        <a href="fotointerna.html" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail">
+                        <a data-fancybox="galeria1" href="img/portifolio6.jpg" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail">
                       </div>
                       <div class="col-md-4 col-sm-6">
-                        <a href="" class="portfolioLink"><img src="img/portifolio1_6.jpeg" class="img-thumbnail" ></a>
+                        <a data-fancybox="galeria1" href="img/portifolio1_6.jpeg" class="portfolioLink"><img src="img/portifolio1_6.jpeg" class="img-thumbnail" ></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                       <a href="" class="portfolioLink"><img src="img/portifolio3.jpg" class="img-thumbnail" ></a>
+                       <a data-fancybox="galeria1" href="img/portifolio3.jpg" class="portfolioLink"><img src="img/portifolio3.jpg" class="img-thumbnail" ></a>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-4 col-sm-6">
-                        <a href="" class="portfolioLink"><img src="img/portifolio4.jpg" class="img-thumbnail" ></a>
+                        <a data-fancybox="galeria1" href="img/portifolio4.jpg" class="portfolioLink"><img src="img/portifolio4.jpg" class="img-thumbnail" ></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                        <a href="" class="portfolioLink"><img src="img/portifolio5.jpg" class="img-thumbnail" ></a>
+                        <a href="img/portifolio5.jpg"  data-fancybox="galeria1" class="portfolioLink"><img src="img/portifolio5.jpg" class="img-thumbnail" ></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                        <a href="" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail" ></a>
+                        <a href="img/portifolio5.jpg"  data-fancybox="galeria1" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail" ></a>
                       </div>
                     </div>
                   </div>
                 </div>
-  		             <!--Carousel
+                   <!--Carousel
       <div class="row-md-12" style="padding: 5%;">
         <div class="container col-md-8 text-center">
           
@@ -113,50 +108,55 @@
         /carousel
       </div>
       /Carousel -->
-  	</section>
+    </section>
 
-	
+  
 
 
 
 
      <!-- footer site -->
-  	<footer style="padding: 3%;margin-top: 3%; background-color: #f6f9f9;" class="bg-light">
+    <footer style="padding: 3%;margin-top: 3%; background-color: #f6f9f9;" class="bg-light">
       <div class="row">
-  		<!--<div class="conteiner"></div>-->
-    		<div id="copyright" class="col-md-6 col-sm-6 col-6">&copy; 2018. Curso Full Stack Bruno Eduardo</div>  		
+      <!--<div class="conteiner"></div>-->
+        <div id="copyright" class="col-md-6 col-sm-6 col-6">&copy; 2018. Curso Full Stack Bruno Eduardo</div>     
 
         <div class="col-md-6 col-sm-6 col-6 text-right">
-      		<!-- Redes Sociais -->
-      		<ul id="redesSociais">
-        		<li>
-        			<a href=""><img src="img/facebook.jpg" alt="Facebook"></a>
-        		</li>
+          <!-- Redes Sociais -->
+          <ul id="redesSociais">
+            <li>
+              <a href=""><img src="img/facebook.jpg" alt="Facebook"></a>
+            </li>
 
-      			<li>
-      				<a href=""><img src="img/twitter.jpg" alt="Twitter"></a>
-      			</li>
+            <li>
+              <a href=""><img src="img/twitter.jpg" alt="Twitter"></a>
+            </li>
 
-      			<li>
-      				<a href=""><img src="img/plus.jpg" alt="Google Plus"></a>
-      			</li>
+            <li>
+              <a href=""><img src="img/plus.jpg" alt="Google Plus"></a>
+            </li>
 
-      			<li>
-      				<a href=""><img src="img/in.jpg" alt="Linkedin"></a>
-      			</li>
-      		</ul>
-      		<!-- [Fim] Redes Sociais -->
+            <li>
+              <a href=""><img src="img/in.jpg" alt="Linkedin"></a>
+            </li>
+          </ul>
+          <!-- [Fim] Redes Sociais -->
         </div>
         <!-- END col-md-6 -->
       </div>
       <!-- END Row -->
-  	</footer>
-  	<!-- Fim footer site -->
+    </footer>
+    <!-- Fim footer site -->
     
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
-    <!-- jQuery first, then Bootstrap JS -->   
+    <!-- jQuery first, then Bootstrap JS -->
+    <!--<script src="js/jquery.fancybox.min.js"></script><<!--Fancy box-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
+   
 </body>
 </html>

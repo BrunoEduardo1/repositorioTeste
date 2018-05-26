@@ -7,6 +7,10 @@ $(document).ready(function () {
 		alert($(this).val());	
 	});
 */
+	$('.slider').bxSlider();
+	$('.data').mask('00/00/0000');
+	$('.cpf').mask('000.000.000-00');
+
 	$("#nomeInput").keyup(function(){
 		var a = $(this).val();
 		if (a.length>= 2 && $("#alertaC").css("display") == "none") {
@@ -18,6 +22,7 @@ $(document).ready(function () {
 		$("#alertaC").html(a);
 	});
 
+	//animação de scroll
 	 $("#galeria-btn-nav, #form-btn-nav").on('click', function(e) {
                // prevent default anchor click behavior
                 e.preventDefault();
@@ -29,8 +34,8 @@ $(document).ready(function () {
                 $('html, body').animate({
                        scrollTop: $(hash).offset().top
                 }, 500, function(){
-                     // when done, add hash to url
-                    // (default click behaviour)
+                     //add hash to url
+                    //(default click behaviour)
                        window.location.hash = hash;
                      });
                 }); 
