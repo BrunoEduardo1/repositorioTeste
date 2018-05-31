@@ -100,14 +100,29 @@ div#bannerHome div h1{
  	border-color: #15a4fa;
  	color: #fff;
  }
+
+ #linha2{
+ 	background-color: #f6f9f9; 
+ 	padding: 6%;
+ }
+
+
  /*
  .btn-outline-primary:hover{
  	border-color: #15a4fa;
  	color: #fff;
  	background-color: #ff3;
  }*/
+#iconesInfo{
+	padding: 5%;
+}
+#iconesInfo .row .col-md-4{
+	padding: 4%;
+}
+.text-bold{
+	font-weight: bold;
+}
 
-/*css-transition*/
 
 div#iconesInfo div.col img {
 	display: block;
@@ -153,16 +168,22 @@ div#formDiv{
 	margin-bottom: -3%;
 }
 
-div#formDiv div#formDivElements{
+div#formDivElements{
 	padding: 5%;
 	color: white;
 	text-align: center;
 }
 
-div#formDiv div#formDivElements p{
+#formDivElements p{
 	margin-bottom: 1%;
 	padding-bottom: 10%;
 	color: grey;
+}
+#formHide{
+	display: none;
+}
+#formDivElements input, textarea{
+	color: #fff;
 }
 
  input.transparent-input, textarea.transparent-input{

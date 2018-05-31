@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/estio.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--slider CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <!--slider CSS-->
+    <!--/slider CSS-->
     <!--ICONE -->
       <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -104,28 +103,28 @@
     </div>
 
 		<!-- Itens das colunas -->  			  
-			<div class="row-md-12" style="background-color: #f6f9f9; padding: 6%;">
-        <div class="container">
-              <h4 style="color: black;text-align: center;">Simple &amp; pure disign.</h4>
-              <p style="text-align: center;">Designers everywhere gush with admiration upon seeing a web design and exclaim, "its beautiful, its so clean!". There are a countless numbers of webdesign round-ups dedicated to 'clean' design and it its a term thrown around quite a bit in  the web design community. It cab be easy to spot a good example of clean design. </p>
+			<div class="row-md-12" id="linha2">
+        <div class="container text-center">
+              <h4>Simple &amp; pure disign.</h4>
+              <p>Designers everywhere gush with admiration upon seeing a web design and exclaim, "its beautiful, its so clean!". There are a countless numbers of webdesign round-ups dedicated to 'clean' design and it its a term thrown around quite a bit in  the web design community. It cab be easy to spot a good example of clean design. </p>
         </div>
       </div>
-      <div class="row">
-        <div style="padding: 5%;" class="mx-auto" id="iconesInfo">
-                  <div class="row">
-                    <div class="col-md-4 text-center" align="middle" style="padding: 3%;">
+      <div class="row-md-12">
+        <div class="mx-auto" id="iconesInfo">
+                  <div class="row text-center">
+                    <div class="col-md-4 text-center" align="middle">
                       <img src="img/icone1.png" class="img-thumbnail">
-                      <p style="font-weight: bold;">Optmized for all devices</p>
+                      <p  class="text-bold">Optmized for all devices</p>
                       <p>STRICT has been disigned to be fully responsive for all devices.</p>
                     </div>
-                    <div class="col-md-4 text-center" align="middle"  style="padding: 3%;">
+                    <div class="col-md-4 text-center" align="middle">
                       <img src="img/icone2.png" class="img-thumbnail">
-                      <p style="font-weight: bold;">optmized for all devices</p>
+                      <p  class="text-bold">optmized for all devices</p>
                       <p>STRICT has been disigned to be fully responsive for all devices.</p>
                     </div>
-                    <div class="col-md-4 text-center" align="middle" style="padding: 3%;">
+                    <div class="col-md-4 text-center" align="middle">
                       <img src="img/icone3.png" class="img-thumbnail">
-                      <p style="font-weight: bold;">optmized for all devices</p>
+                      <p class="text-bold">optmized for all devices</p>
                       <p>STRICT has been disigned to be fully responsive for all devices.</p>
                     </div>
                   </div>
@@ -133,7 +132,7 @@
       </div>
       <!-- Itens das colunas -->      
         <!--Potifolio-->
-                <div class="row" id="portifolio">
+                <div class="row-md-12" id="portifolio">
                   <div class="container text-center">
                     <h3>Showcase your work like a pro</h3>
                     <br>
@@ -184,7 +183,7 @@
                 </div>
           <!--Fim Potifolio-->
           <!--Formulario fale conosco-->
-                <div class="row" id="formDiv">
+                <div class="row-md-12" id="formDiv">
                   <div class="col-md-6 mx-auto" id="formDivElements">
                     <h3 class="display-3">Stay with us</h3>
                     <P>we ensure quality &amp; support <br></P>
@@ -200,66 +199,52 @@
                       </div>
                        <div class="form-group">
                            <!--<label for="exampleFormControlInput1">Email address</label> for refere-se ao id-->
-                          <input type="text" class="form-control transparent-input cpf"  id="compocpf" placeholder="CPF" required="true" name="cpf">
+                          <input type="text" class="form-control transparent-input cpf"  id="campocpf" placeholder="CPF" required="true" name="cpf">
+                          <div class="invalid-feedback">CPF invalido.</div>
                       </div>
-                       <div class="form-group">
-                           <!--<label for="exampleFormControlInput1">Email address</label> for refere-se ao id-->
-                          <input type="text" class="form-control transparent-input data" id="compocpf" placeholder="Data" required="true" name="datanas">
+                      <div class="form-group">
+                          <input type="text" class="form-control transparent-input data" id="datanas" placeholder="Data" required="true" name="datanas">
                       </div>
 
-                      <div class="form-group">
-                          <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
-                          <textarea class="form-control transparent-input" id="exampleFormControlTextarea1" rows="3" placeholder="Message" name="areaMensagem" style="resize: none;"></textarea>
+                       <!--formulario hide-->
+                      <div id="formHide">
+                            <div class="form-row my-3 ">
+                              <div class="col-md-4">
+                                <input type="text" placeholder="CEP" name="cep" id="cep" required="required" oninvalid="this.setCustomValidity('Insira seu CEP')" class="form-control transparent-input cep" maxlength="8">
+                              <div class="invalid-feedback">CEP não econtrado.</div>
+                              </div>
+                              <div class="col">
+                                <input type="text" name="endereco" id="endereco" required="required" placeholder="Endereco" class="form-control transparent-input"> 
+                               </div>    
+                            </div>
+                            <div class="form-group">
+                              <input type="text" name="bairro" id="bairro" required="required" placeholder="Bairro" class="form-control transparent-input">   
+                            </div>
+                            <div class="form-row my-3">
+                              <div class="col">
+                                <input type="text" name="cidade" id="cidade" required="required" placeholder="Cidade" class="form-control transparent-input">
+                              </div>
+                              <div class="col">  
+                                <input type="text" name="estado" id="estado" required="required" placeholder="Estado" class="form-control transparent-input">
+                              </div>    
+                            </div>
                       </div>
+                       <!--fim formulario hide-->
+                      <div class="form-group">
+                          <textarea class="form-control transparent-input" id="exampleFormControlTextarea1" rows="3" placeholder="Mensagem" name="areaMensagem" style="resize: none;"></textarea>
+                      </div>
+                        
                       <div class="form-group">
                             <div class="row">
-                              <div class="col-md-6">
-                                <input type="checkbox" name="receberNews" class="float-left form-check-inline" name="Newsletter"> 
-                                <label for="receberNews" class="float-left form-check-inline">Subscribe Newsletter</label>
+                              <div class="col-md-12 col-sm-4 form-inline">
+                                <input type="checkbox" name="receberNews" class="form-check-inline" name="Newsletter"> 
+                                <label for="receberNews" class="form-check-inline">Receber Atualizações</label>
                                 <!--<label for="receberNews" class="float-left"> Subscribe Newsletter</label>-->
+                                <button type="submit" class="btn btn-outline-primary ml-auto" style="color: #fff;">Cadastrar</button>
                               </div>
-                              <div class="col-md-6">
-                                  <!-- Button trigger modal -->
-                                <button type="button" id="avc" class="btn btn-outline-primary float-right" style="color: #fff;">avançar</button>
-                              </div>
+                              
                            </div> 
                       </div>
-<!-- Modal -->
-                            <div class="modal fade" id="form2" tabindex="-1" role="dialog" aria-labelledby="form2Label" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content  bg-dark">
-                                  <div class="modal-header  bg-dark">
-                                    <h5 class="modal-title" id="form2Label">Complete os dados</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="modal-body bg-dark">
-                                      <div class="form-group ">
-                                          <input type="text" placeholder="CEP" name="cep" id="cep" required="required" oninvalid="this.setCustomValidity('Insira seu CEP')" class="form-control transparent-input cep">   
-                                        </div>
-
-                                        <div class="form-group">
-                                          <input type="text" name="endereco" id="endereco" required="required" placeholder="endereco" class="form-control transparent-input">   
-                                        </div>
-
-                                        <div class="form-group">
-                                          <input type="text" name="bairro" id="bairro" required="required" placeholder="bairro" class="form-control transparent-input">   
-                                        </div>
-
-                                        <div class="form-group">
-                                          <input type="text" name="cidade" id="cidade" required="required" placeholder="cidade" class="form-control transparent-input">   
-                                        </div>
-
-                                        <div class="form-group">
-                                          <input type="text" name="estado" id="estado" required="required" placeholder="estado" class="form-control transparent-input">   
-                                      </div>
-                                      <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-<!--fim MOdal--> <!--bug ao fechar o modal-->
                     </form>
                   </div>
                 </div>
@@ -272,9 +257,9 @@
   	<footer style="padding: 2%;margin-top: 3%; background-color: #f6f9f9;" class="bg-light">
       <div class="row">
   		<!--<div class="conteiner"></div>-->
-    		<div id="copyright" class="col-md-6 col-sm-6 col-6">&copy; 2018. Curso Full Stack Bruno Eduardo</div>  		
+    		<div id="copyright" class="col-md-6 col-sm-6 col-12">&copy; 2018. Curso Full Stack Bruno Eduardo</div>  		
 
-        <div class="col-md-6 col-sm-6 col-6 text-right">
+        <div class="col-md-6 col-sm-6 col-12 text-right">
       		<!-- Redes Sociais -->
       		<ul id="redesSociais">
         		<li>

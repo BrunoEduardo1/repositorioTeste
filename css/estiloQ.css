@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+#quemsomos, #serifa{
+	padding: 3%;
+}
+
+
+#quemsomos h2, #serifa h2{
+	padding-bottom: 3%;
+	font-family: 'Ubuntu', sans-serif;
+}

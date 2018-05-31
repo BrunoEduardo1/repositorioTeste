@@ -7,23 +7,38 @@ $(document).ready(function () {
 	/*mascaras*/
 	$('.data').mask('00/00/0000');
 	$('.cpf').mask('000.000.000-00');
+    $('.cep').mask('00000-000');
 	//validar CPF
 	$('.cpf').blur(function (){
 		if ($(this).val()==null){
 
 		}else{
 			if(TestaCPF($(this).val())==false){
-				alert('cpf incorreto!');
+				//alert('cpf incorreto!');
+                $('#campocpf').addClass('is-invalid');
 			}else{
 				console.log('cpf True');
+                $('#formHide').fadeIn(1000);
+                $('#campocpf').removeClass('is-invalid');
 			}
 		}
 	});
-	/*
-	$("#nomeInput").oninvalid(function(){
-		$(this).setCustomValidity('Por favor, insira seu nome!');
-		alert('hue');
-	});*/
+    //verifica se a data é existente
+    $('#datanas').blur(function (){
+        var dataOBJ = new Date();
+        var testeData = $(this).val();
+        var today = dataOBJ.getDate()+'/'+(dataOBJ.getMonth()+1)+'/'+dataOBJ.getFullYear();
+
+        if (testeData<"31/12/1900" || testeData>=today) {
+            console.log('Data invalida menor q');   
+        }
+            if (testeData=="") {
+                console.log('sem data');
+            } else if (testeData[0]>3 || (testeData[0]==3 && testeData[1]==2)){
+                console.log('dia invalido');
+            }
+    });
+
 
 	//animação de scroll
 	 $("#galeria-btn-nav, #form-btn-nav").on('click', function(e) {
@@ -81,34 +96,29 @@ $(document).ready(function () {
                         $("#endereco").val(dados.logradouro);
                         $("#bairro").val(dados.bairro);
                         $("#cidade").val(dados.localidade);
-                        $("#estado").val(dados.uf);                            
+                        $("#estado").val(dados.uf); 
+                        $('#cep').removeClass('is-invalid');                           
                     } //end if.
                     else {
                         //CEP pesquisado não foi encontrado.
                         limpa_formulario_cep();
-                        alert("CEP não encontrado.");
+                        //alert("CEP não encontrado.");
+                        $('invalid-feedback').show();
+                        $('#cep').addClass('is-invalid');
                     }
                 });
             } //end if.
             else {
                 //cep é inválido.
                 limpa_formulario_cep();
-                alert("Formato de CEP inválido.");
+                //alert("Formato de CEP inválido.");
+                $('#cep').addClass('is-invalid');
             }
         } //end if.
         else {
             //cep sem valor, limpa formulário.
             limpa_formulario_cep();
         }
-    });
-
-    $('#avc').click(function (){
-    		console.log('modal apareca');
-    		$(this).attr('data-toggle','modal');
-    		$(this).attr('data-target','#form2');
-    		  var hash = $('body').hash;
-    		  window.location.hash = hash;
-    	
     });
 
 
