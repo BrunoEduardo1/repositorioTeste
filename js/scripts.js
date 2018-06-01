@@ -10,34 +10,47 @@ $(document).ready(function () {
     $('.cep').mask('00000-000');
 	//validar CPF
 	$('.cpf').blur(function (){
+        $(this).attr('required','true');
 		if ($(this).val()==null){
 
 		}else{
 			if(TestaCPF($(this).val())==false){
 				//alert('cpf incorreto!');
                 $('#campocpf').addClass('is-invalid');
+                //$('#formHide').fadeOut(500);
 			}else{
-				console.log('cpf True');
-                $('#formHide').fadeIn(1000);
+                //mostra a segunda parte do formulário se o cpf é válido
+                $('#formHide').fadeIn(1000); 
+                //feedack 
                 $('#campocpf').removeClass('is-invalid');
 			}
 		}
 	});
     //verifica se a data é existente
     $('#datanas').blur(function (){
+        $(this).attr('required','true');
+        $('.cpf').attr('required','true');
         var dataOBJ = new Date();
         var testeData = $(this).val();
         var today = dataOBJ.getDate()+'/'+(dataOBJ.getMonth()+1)+'/'+dataOBJ.getFullYear();
-
-        if (testeData<"31/12/1900" || testeData>=today) {
-            console.log('Data invalida menor q');   
+        // || (testeData[4]>today[3] && testeData[7]==today[6]) 2008 prob
+        if (testeData<'01/01/1900'|| testeData>=today || testeData[3]>1) {
+            $('#datanas').addClass('is-invalid');
+            $('#datainvalida').text('Data invalida');
+            //não impede a retirada do required
+            $('#datanas').val(null);   
         }
             if (testeData=="") {
                 console.log('sem data');
+                $('#datanas').removeClass('is-invalid');
             } else if (testeData[0]>3 || (testeData[0]==3 && testeData[1]==2)){
                 console.log('dia invalido');
             }
+    
     });
+    //fim verifica se a data é existente
+
+   
 
 
 	//animação de scroll

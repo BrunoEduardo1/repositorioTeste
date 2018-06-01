@@ -1,3 +1,4 @@
+
 body{
 	 color: #000;		
 }
@@ -19,3 +20,22 @@ header{
 #redesSociais li{
 	display: inline-block;
 }
+
+/*botões cabecalho*/
+#bannerHome a{
+	margin-top: 3%;
+	margin-bottom: 8%;
+}
+/*/botões cabecalho*/
+
+/*footer*/
+footer{
+	padding: 2%;
+	margin-top: 3%;
+	background-color: #f6f9f9;
+}
+/*/footer*/
+textarea{
+	resize: none;
+}
+

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/estio.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resize.css">
     <!--slider CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <!--/slider CSS-->
@@ -53,14 +54,8 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#portifolio" id="galeria-btn-nav">Galeria</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#formDiv" id="form-btn-nav">Formulário</a>
-                    <a class="dropdown-item" href="#">...</a>
-                  </div>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#formDiv" id="form-btn-nav" target="_self">Contato</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -82,21 +77,17 @@
                   <h1 class="" id="principal-text">FULL STACK</h1>
                   <hr id="principal-hr">
                   <p class="principal-subT">Curso de introdução ao desenvolvimento Full Stack</p>
-                  <a href="#portifolio" class="btn btn-outline-primary" style="margin-top: 5%;margin-bottom: 10%;">call to action</a> 
-                  <a href="http://school.codingtecnologia.com" class="btn btn-outline-primary" target="_blanck" style="margin-top: 5%;margin-bottom: 10%;">ir para o curso</a>
-                  <a href="" style="text-decoration: none;color: white;"><span class="glyphicon glyphicon-chevron-down" style="display: block;border-color: #15a4fa;"></span></a>
-                  <span class="glyphicon glyphicon-chevron-down"></span>
+                  <a href="#portifolio" class="btn btn-outline-primary">call to action</a> 
+                  <a href="http://school.codingtecnologia.com" class="btn btn-outline-primary" target="_blanck">ir para o curso</a>
             </div>
   		</div>
       <div id="bannerHome" class="col-md-12">
            <div class="col-md-6 col-sm-6 mx-auto align-middle">  
-                  <h1 class="" id="principal-text">FULL STACK 2</h1>
+                  <h1 class="" id="principal-text">STACK 2</h1>
                   <hr id="principal-hr">
                   <p class="principal-subT">Curso de introdução ao desenvolvimento Full Stack</p>
-                  <a href="#portifolio" class="btn btn-outline-primary" style="margin-top: 5%;margin-bottom: 10%;">call to action</a> 
-                  <a href="http://school.codingtecnologia.com" class="btn btn-outline-primary" target="_blanck" style="margin-top: 5%;margin-bottom: 10%;">ir para o curso</a>
-                  <a href="" style="text-decoration: none;color: white;"><span class="glyphicon glyphicon-chevron-down" style="display: block;border-color: #15a4fa;"></span></a>
-                  <span class="glyphicon glyphicon-chevron-down"></span>
+                  <a href="#portifolio" class="btn btn-outline-primary">call to action</a> 
+                  <a href="http://school.codingtecnologia.com" class="btn btn-outline-primary" target="_blanck">ir para o curso</a>
             </div>
       </div>
 
@@ -185,38 +176,40 @@
           <!--Formulario fale conosco-->
                 <div class="row-md-12" id="formDiv">
                   <div class="col-md-6 mx-auto" id="formDivElements">
-                    <h3 class="display-3">Stay with us</h3>
-                    <P>we ensure quality &amp; support <br></P>
-                    <form method="POST" action=""> <!-- Formulario -->
+                    <!--<h3 class="display-3">Stay with us</h3>-->
+                    <!--<P>we ensure quality &amp; support <br></P>-->
+                    <h3 class="display-3">Cadastre-se</h3>
+                    <P>Garantimos suporte &amp; qualidade.<br></P>
+                    <form method="POST" action="" id="formF"> <!-- Formulario -->
                       <div class="form-group">
-                          <!--<label for="nomeInput">Full name</label>-->
                           <input type="text" class="form-control transparent-input" id="nomeInput" placeholder="Nome completo" required="true" name="nome"
                            oninvalid="this.setCustomValidity('Por favor, Insira seu nome!')">
                       </div>
                       <div class="form-group">
-                           <!--<label for="exampleFormControlInput1">Email address</label> for refere-se ao id-->
                           <input type="email" class="form-control transparent-input" id="exampleFormControlInput1" placeholder="name@example.com" required="true" name="email">
                       </div>
                        <div class="form-group">
-                           <!--<label for="exampleFormControlInput1">Email address</label> for refere-se ao id-->
-                          <input type="text" class="form-control transparent-input cpf"  id="campocpf" placeholder="CPF" required="true" name="cpf">
-                          <div class="invalid-feedback">CPF invalido.</div>
+                          <input type="text" class="form-control transparent-input cpf"  id="campocpf" placeholder="CPF" required="required" name="cpf">
+                          <!--feedback-->
+                          <div class="invalid-feedback mr-auto">CPF invalido.</div>
+
                       </div>
                       <div class="form-group">
-                          <input type="text" class="form-control transparent-input data" id="datanas" placeholder="Data" required="true" name="datanas">
+                          <input type="text" class="form-control transparent-input data" id="datanas" placeholder="Data" required="required" name="datanas">
+                          <div class="invalid-feedback" id="datainvalida"></div>
                       </div>
 
-                       <!--formulario hide-->
+                  <!--formulario hide-->
                       <div id="formHide">
-                            <div class="form-row my-3 ">
-                              <div class="col-md-4">
+                            <div class="form-row my-3 "><!--cep e endereco-->
+                                <div class="col-md-4">
                                 <input type="text" placeholder="CEP" name="cep" id="cep" required="required" oninvalid="this.setCustomValidity('Insira seu CEP')" class="form-control transparent-input cep" maxlength="8">
-                              <div class="invalid-feedback">CEP não econtrado.</div>
+                                <div class="invalid-feedback">CEP não econtrado.</div>
                               </div>
-                              <div class="col">
+                            <div class="col">
                                 <input type="text" name="endereco" id="endereco" required="required" placeholder="Endereco" class="form-control transparent-input"> 
                                </div>    
-                            </div>
+                            </div><!--//cep e endereco-->
                             <div class="form-group">
                               <input type="text" name="bairro" id="bairro" required="required" placeholder="Bairro" class="form-control transparent-input">   
                             </div>
@@ -228,19 +221,40 @@
                                 <input type="text" name="estado" id="estado" required="required" placeholder="Estado" class="form-control transparent-input">
                               </div>    
                             </div>
+                             <div class="form-row my-3 ml-auto">
+                          <!--linguagens que o usuário conhece-->
+                          <div class="form-inline ml-4">
+                            <input type="checkbox" class="form-check-inline" name="formHtml"> <label for="html" class="form-check-inline">Html</label>
+                            <input type="checkbox" class="form-check-inline ml-4" name="formJavascript">
+                            <label for="formJavascript" class="form-check-inline">Javascript</label>
+
+                            <input type="checkbox" class="form-check-inline ml-4" name="formJava">
+                            <label for="formJava" class="form-check-inline">Java</label>
+
+                            <input type="checkbox" class="form-check-inline ml-4" name="formPhp">
+                            <label for="formPhp" class="form-check-inline">PHP</label>
+
+                            <input type="checkbox" class="form-check-inline ml-4" name="formRuby">
+                            <label for="formRuby" class="form-check-inline">Ruby</label>
+                          </div>
+                           <!--/linguagens que o usuário conhece-->
+
                       </div>
-                       <!--fim formulario hide-->
+                    <!--fim formulario hide-->
+                     
+                      </div>
                       <div class="form-group">
-                          <textarea class="form-control transparent-input" id="exampleFormControlTextarea1" rows="3" placeholder="Mensagem" name="areaMensagem" style="resize: none;"></textarea>
+                          <textarea class="form-control transparent-input" id="exampleFormControlTextarea1" rows="3" placeholder="Mensagem" name="areaMensagem"></textarea>
                       </div>
                         
                       <div class="form-group">
                             <div class="row">
-                              <div class="col-md-12 col-sm-4 form-inline">
+                              <div class=" form-inline col-md-6 col-sm-6 col-8">
                                 <input type="checkbox" name="receberNews" class="form-check-inline" name="Newsletter"> 
                                 <label for="receberNews" class="form-check-inline">Receber Atualizações</label>
-                                <!--<label for="receberNews" class="float-left"> Subscribe Newsletter</label>-->
-                                <button type="submit" class="btn btn-outline-primary ml-auto" style="color: #fff;">Cadastrar</button>
+                              </div>
+                              <div class="form-inline col-md-6 col-sm-6 col-4">
+                                <button type="submit" class="btn btn-outline-primary ml-auto float-left">Cadastrar</button>
                               </div>
                               
                            </div> 
@@ -254,7 +268,7 @@
   	</section>
 
   	<!-- footer site -->
-  	<footer style="padding: 2%;margin-top: 3%; background-color: #f6f9f9;" class="bg-light">
+  	<footer class="bg-light">
       <div class="row">
   		<!--<div class="conteiner"></div>-->
     		<div id="copyright" class="col-md-6 col-sm-6 col-12">&copy; 2018. Curso Full Stack Bruno Eduardo</div>  		

@@ -1,0 +1,128 @@
+/*--Deve ficar acima-- media query(Para redimensionar o tamanho da fonte do cabecalho)and 
+(max-width:359px)*/
+
+@media only screen and (min-width: 300px)  {
+	h1#principal-text,div#formDivElements h3{
+		font-size: 44px;
+	}
+	
+	/*Del this*/
+	div.bx-viewport{
+		height: 250px;
+	}
+	div#bannerHome{
+	   	width: 100%;
+	    height: 250px;
+	    background-size: 516px;
+	    padding-top: 32px;
+	    padding-right: 0px;
+	}
+	/*/Del this*/
+} 
+
+@media only screen and (min-width: 360px)  {
+	h1#principal-text,div#formDivElements h3{
+		font-size: 51px;
+	}
+	/*Del this*/
+	div.bx-viewport{
+		height: 250px;
+	}
+	div#bannerHome{
+	   	width: 100%;
+	    height: 271px;
+	    background-size: 159%;
+	    padding-top: 32px;
+	    padding-right: 0px;
+	}
+	/*/Del this*/
+} 
+
+@media only screen and (min-width: 400px)  {
+	h1#principal-text,div#formDivElements h3{
+		font-size: 51px;
+	}
+	/*Del this*/
+	div.bx-viewport{
+		height: 237px;
+	}
+	div#bannerHome{
+	   	width: 100%;
+	    height: 271px;
+	    background-size: 139%;
+	    padding-top: 32px;
+	    padding-right: 0px;
+	}
+	/*/Del this*/
+} 
+
+@media only screen and (min-width: 600px) {
+	h1#principal-text,div#formDivElements h3{
+		font-size: 55px;
+	}
+	/*Del this*/
+	div.bx-viewport{
+		height: 329px;
+	}
+	div#bannerHome{
+	   	width: 100%;
+	    height: 339px;
+	    background-size: 133%;
+	    padding-top: 0.4%;
+	    padding-right: 0px;
+	}
+	/*/Del this*/
+
+} 
+@media only screen and (min-width: 800px) {
+	h1#principal-text,div#formDivElements h3{	
+		font-size: 60px;
+	}
+	/*
+	div#bannerHome{
+		width: 100%;
+	    height: 213px;
+	    background-size: 100%;
+		padding-top: 40px;
+
+	}*/
+
+} 
+
+@media only screen and (min-width: 1000px) {
+	h1#principal-text,div#formDivElements h3{	
+		font-size: 80px;
+	}
+
+	/*Del this*/
+	div.bx-viewport{
+		height: 383px;
+	}
+	div#bannerHome{
+	   	width: 100%;
+	    height: 410px;
+	    background-size: 100%;
+	    padding-top: 0.4%;
+	    padding-right: 0px;
+	}
+	/*/Del this*/
+} 
+@media only screen and (min-width: 1440px) {
+	h1#principal-text,div#formDivElements h3{	
+		font-size: 80px;
+	}
+
+	/*Del this*/
+	div.bx-viewport{
+		height: 383px;
+	}
+	div#bannerHome{
+	   	width: 100%;
+	    height: 410px;
+	    background-size: 100%;
+	    padding-top: 0.4%;
+	    padding-right: 0px;
+	}
+	/*/Del this*/
+} 
+/* fim media query*/
