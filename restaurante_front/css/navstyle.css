@@ -1,0 +1,96 @@
+/*Estilo da barra lateral*/
+#mobileMenu{
+  color: #fff;
+}
+#sidebar a{
+  text-decoration: /*none*/;
+  color: #000;
+}
+#sidebar li{
+  padding: 3% 0;
+}
+
+#sidebar h5{
+  padding-top: 5%;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 670px) {
+   #sidebar {
+    display: none;
+  }
+  #contentTitle{
+    font-size: 2.3rem;
+  }
+  #sidebar li{
+  padding: 3% 0;
+  }
+
+}
+
+@media only screen and (min-width: 670px) and (max-width: 799px) {
+   #sidebar {
+    min-width: 175px;
+    max-width: 153px;
+    min-height: 100vh;
+    padding-left: 0px;
+
+  }
+  #mobileMenu{
+    display: none !important;
+  }
+  #contentTitle{
+    font-size: 2.8rem;
+  }
+
+}
+@media only screen and (min-width: 800px) and (max-width: 960px) {
+   #sidebar {
+    min-width: 185px;
+    max-width: 185px;
+    min-height: 100vh;
+  }
+    #mobileMenu{
+    display: none !important;
+  }
+
+
+}
+/*bRnEd*/
+@media only screen and (min-width: 960px) {
+   #sidebar {
+    min-width: 193px;
+    max-width: 193px;
+    min-height: 100vh;
+  }
+    #mobileMenu{
+    display: none !important;
+  }
+
+  @media only screen and (min-width: 1280px){
+   #sidebar {
+    min-width: 230px;
+    max-width: 230px;
+    min-height: 100vh;
+  }
+    #mobileMenu{
+    display: none !important;
+  }
+
+
+}
+

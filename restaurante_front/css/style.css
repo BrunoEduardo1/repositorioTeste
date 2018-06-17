@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+/*font-family: 'Hind', sans-serif;*/
+#navbar{
+	background-color: #fff;
+	padding: 1.5%;
+}
+.container-fluid{
+	padding: 0!important;
+}
+.slider1{
+	background: url('../img/slider1.png') center no-repeat;
+	height: 500px;
+	font-family: 'Pacifico', cursive;
+}
+.bx-wrapper{
+	margin-bottom: 0px!important;
+}
+
+.slider1 h1{
+	padding-top:177px;
+
+}
+#legendaSlider{
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	height: 500px;
+}
+#theMenuBackground{
+	background: url('../img/menuUnderSlider.png') no-repeat;
+	color: #fff;
+	height: 155px;
+	width: 155px;
+}
+/*lista de refericoes*/
+#categorias, .cor{
+	color: #f34949!important;
+}
+.row a{
+	text-decoration: none;
+	color: #343434;
+}
+#vermais{
+	padding: 0% 3%;
+	border-radius: 12px;
+	color: #343434;
+	border-color: #f34949!important;
+}
+#vermais:hover{
+	color: #fff;
+	border-color: #f34949!important;
+	background: #f34949!important;
+}
+
+/*Galeria*/
+#galeriaList{
+	list-style-type: none;
+	padding: 0;
+}
+#galeriaList li{
+	display: inline;
+}
+#galeriaList li img{
+	height: 237px;
+}
+/* /Galeria*/
+
+/*Cardapio*/
+.form-inline .form-gruop input{
+	/*padding: 4%;*/
+}
+
+footer{
+	background: #3b3b3b;
+	padding: 3%;
+	margin-top: 3%;
+	color: #fff;
+}
+footer .container ul{
+	list-style-type: none;
+}
+footer .container ul a{
+	color: #fff;
+	font-weight: bold;
+}
+
+#logo a{
+	font-family: 'Hind', sans-serif;
+}
+.md-22{font-size: 22px;}
+.iml{margin-left: 2%; vertical-align: middle;}

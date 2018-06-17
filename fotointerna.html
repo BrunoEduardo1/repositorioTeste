@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/estio.css"> <!--estiLo-->
-    <!--<link rel="stylesheet" href="css/jquery.fancybox.min.css"/>-->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <title>Foto interna</title>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+    <title>Foto interna</title>
 </head>
 <body>
    <!-- Topo do site -->
@@ -53,28 +52,40 @@
                     <br>
                     <div class="row">
                       <div class="col-md-4 col-sm-6">
-                        <a data-fancybox="galeria1" href="img/portifolio6.jpg" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail">
+                        <a data-fancybox="galeria1" href="img/portifolio6.jpg" class="portfolioLink">
+                          <img src="img/portifolio6.jpg" class="img-thumbnail">
+                        </a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                        <a data-fancybox="galeria1" href="img/portifolio1_6.jpeg" class="portfolioLink"><img src="img/portifolio1_6.jpeg" class="img-thumbnail" ></a>
+                        <a data-fancybox="galeria1" data-fancybox data-caption="Descrição da imagem" href="img/portifolio1_6.jpeg" class="portfolioLink">
+                          <img src="img/portifolio1_6.jpeg" class="img-thumbnail" >
+                        </a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                       <a data-fancybox="galeria1" href="img/portifolio3.jpg" class="portfolioLink"><img src="img/portifolio3.jpg" class="img-thumbnail" ></a>
+                       <a data-fancybox="galeria1" href="img/portifolio3.jpg" class="portfolioLink">
+                        <img src="img/portifolio3.jpg" class="img-thumbnail" >
+                       </a>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-4 col-sm-6">
-                        <a data-fancybox="galeria1" href="img/portifolio4.jpg" class="portfolioLink"><img src="img/portifolio4.jpg" class="img-thumbnail" ></a>
+                        <a data-fancybox="galeria1" href="img/portifolio4.jpg" class="portfolioLink">
+                          <img src="img/portifolio4.jpg" class="img-thumbnail" >
+                        </a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                        <a href="img/portifolio5.jpg"  data-fancybox="galeria1" class="portfolioLink"><img src="img/portifolio5.jpg" class="img-thumbnail" ></a>
+                        <a data-fancybox="galeria1" href="img/portifolio5.jpg" class="portfolioLink">
+                          <img src="img/portifolio5.jpg" class="img-thumbnail" >
+                        </a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                        <a href="img/portifolio5.jpg"  data-fancybox="galeria1" class="portfolioLink"><img src="img/portifolio6.jpg" class="img-thumbnail" ></a>
+                        <a href="img/portifolio5.jpg"  data-fancybox="galeria1" class="portfolioLink">
+                          <img src="img/portifolio6.jpg" class="img-thumbnail" >
+                        </a>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>  
     </section>
 
   
@@ -83,48 +94,42 @@
 
 
      <!-- footer site -->
-    <footer style="padding: 3%;margin-top: 3%; background-color: #f6f9f9;" class="bg-light">
-      <div class="row">
-      <!--<div class="conteiner"></div>-->
-        <div id="copyright" class="col-md-6 col-sm-6 col-6">&copy; 2018. Curso Full Stack Bruno Eduardo</div>     
+    <footer class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div id="copyright" class="col-md-6 col-sm-6 col-6">&copy; 2018. Curso Full Stack Bruno Eduardo</div>
+          <div class="col-md-6 col-sm-6 col-6 text-right">
+            <!-- Redes Sociais -->
+            <ul id="redesSociais">
+              <li>
+                <a href=""><img src="img/facebook.jpg" alt="Facebook"></a>
+              </li>
 
-        <div class="col-md-6 col-sm-6 col-6 text-right">
-          <!-- Redes Sociais -->
-          <ul id="redesSociais">
-            <li>
-              <a href=""><img src="img/facebook.jpg" alt="Facebook"></a>
-            </li>
+              <li>
+                <a href=""><img src="img/twitter.jpg" alt="Twitter"></a>
+              </li>
 
-            <li>
-              <a href=""><img src="img/twitter.jpg" alt="Twitter"></a>
-            </li>
+              <li>
+                <a href=""><img src="img/plus.jpg" alt="Google Plus"></a>
+              </li>
 
-            <li>
-              <a href=""><img src="img/plus.jpg" alt="Google Plus"></a>
-            </li>
-
-            <li>
-              <a href=""><img src="img/in.jpg" alt="Linkedin"></a>
-            </li>
-          </ul>
-          <!-- [Fim] Redes Sociais -->
+              <li>
+                <a href=""><img src="img/in.jpg" alt="Linkedin"></a>
+              </li>
+            </ul>
+            <!-- [Fim] Redes Sociais -->
+          </div>
         </div>
-        <!-- END col-md-6 -->
       </div>
-      <!-- END Row -->
     </footer>
     <!-- Fim footer site -->
     
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
-    <!-- jQuery first, then Bootstrap JS -->
-    <!--Fancy box script e CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"/>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <!--Fancy box script-->
     <script src="js/jquery.fancybox.js"></script>
-
-   
 </body>
    
 </html>

@@ -57,7 +57,7 @@ div#bannerHome div h1{
  	background-color: #ff3;
  }*/
 #iconesInfo{
-	padding: 5%;
+	padding: 2% 0;
 }
 #iconesInfo .row .col-md-4{
 	padding: 4%;
@@ -107,6 +107,7 @@ ul#listaPortifolio li img{
 div#formDiv{
 	background-image: url('../img/form-bg-blue.jpeg');
 	/*background-size: 100%;*/
+	background-position: center;
 	background-repeat: no-repeat;
 	margin-bottom: -3%;
 }

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body{
+	/*color: hsla(0,0%,100%,.6);*/
+	background: url('https://architecturedsgn.com/wp-content/uploads/2018/01/background-sign-cup-stock-vector-shutterstock-banner-design-banner-coffee-shop-menu-background-design-stock-vector-restaurant-house-restaurant-coffee-shop-menu-background.jpg') center ;
+
+}
+body .btn{
+	border-radius: 9px;
+}
+#main{
+	font-family:'Pacifico', cursive;
+	color: #fff;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#main p{
+	font-size: 22px;
+}
+
+
+
+
+
+/*media query*/
+
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+		.display-1 {
+    		font-size: 2.1rem;
+    		font-weight: 300;
+	    	line-height: 1.2;
+	}
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+		.display-1 {
+    	font-size: 2.5rem;
+    	font-weight: 300;
+    	line-height: 1.2;
+	}
+
+}
+@media only screen and (min-width: 768px)  and (max-width: 1023px) {
+	.display-1 {
+    	font-size: 4rem;
+    	font-weight: 300;
+    	line-height: 1.2;
+	}
+
+} 
+
+@media only screen and (min-width: 1024px) {
+
+
+} 
+/* fim media query*/
