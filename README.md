@@ -1,3 +1,3 @@
 # repositorioTeste
-Projeto Cruso Full Stack
-Front End
+Projeto Cruso Full Stack;
+Front End Da Página.
